@@ -1,0 +1,7 @@
+# Simpan sebagai C:\caddy\Caddyfile. Ganti dengan domain Anda.
+palapadentists.com, www.palapadentists.com {
+    request_body {
+        max_size 6MB
+    }
+    reverse_proxy 127.0.0.1:3000
+}

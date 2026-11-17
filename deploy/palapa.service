@@ -1,0 +1,16 @@
+# Salin ke /etc/systemd/system/palapa.service
+[Unit]
+Description=Palapa Dentists website
+After=network.target
+
+[Service]
+User=palapa
+WorkingDirectory=/home/palapa/palapa
+EnvironmentFile=/etc/palapa.env
+ExecStart=/usr/bin/node server.js
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
